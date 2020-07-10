@@ -17,7 +17,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	var extractVersion, changelogPath string
+	var changelogPath string
 	flag.StringVar(&changelogPath, "path", filepath.Join(wd, "CHANGELOG.md"), "path to the changelog file")
 	flag.StringVar(&extractVersion, "version", "", "version to extract changelog for (e.g. 1.0.0)")
 	flag.Parse()
