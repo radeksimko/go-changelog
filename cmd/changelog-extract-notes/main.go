@@ -28,13 +28,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	f, err := os.Open(changelogPath)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "unable to open changelog file: %s", err)
-		os.Exit(1)
-	}
-
-	b, err := ioutil.ReadAll(f)
+	b, err := ioutil.ReadFile(changelogPath)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "unable to read changelog file: %s", err)
 		os.Exit(1)
